@@ -19,8 +19,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    const num1 = Number(req.body.num1);
-    const num2 = Number(req.body.num2);
+    console.log(typeof req.body.num1);
+    const num1 = req.body.num1;
+    const num2 = req.body.num2;
     const sum = num1 + num2;
     if(isNaN(num1) || isNaN(num2)) {
         const data = {
@@ -51,8 +52,8 @@ app.post('/add', (req, res) => {
 });
 
 app.post('/sub', (req, res) => {
-    const num1 = Number(req.body.num1);
-    const num2 = Number(req.body.num2);
+    const num1 = req.body.num1;
+    const num2 = req.body.num2;
     const diff = num1 - num2;
     if(isNaN(num1) || isNaN(num2)) {
         const data = {
@@ -83,8 +84,8 @@ app.post('/sub', (req, res) => {
 });
 
 app.post('/multiply', (req, res) => {
-    const num1 = Number(req.body.num1);
-    const num2 = Number(req.body.num2);
+    const num1 = req.body.num1;
+    const num2 = req.body.num2;
     const mul = num1 * num2;
     if(isNaN(num1) || isNaN(num2)) {
         const data = {
@@ -115,8 +116,8 @@ app.post('/multiply', (req, res) => {
 });
 
 app.post('/divide', (req, res) => {
-    const num1 = Number(req.body.num1);
-    const num2 = Number(req.body.num2);
+    const num1 = req.body.num1;
+    const num2 = req.body.num2;
     const div = num1 / num2;
     if(isNaN(num1) || isNaN(num2)) {
         const data = {
