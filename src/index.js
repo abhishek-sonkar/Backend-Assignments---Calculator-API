@@ -19,11 +19,11 @@ app.get('/', (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    console.log(typeof req.body.num1);
+    //console.log(typeof req.body.num1);
     const num1 = req.body.num1;
     const num2 = req.body.num2;
     const sum = num1 + num2;
-    if(isNaN(num1) || isNaN(num2)) {
+    if(typeof num1 === "string" || typeof num2 === "string") {
         const data = {
             status: 'error',
             message: 'Invalid data types'
@@ -55,7 +55,7 @@ app.post('/sub', (req, res) => {
     const num1 = req.body.num1;
     const num2 = req.body.num2;
     const diff = num1 - num2;
-    if(isNaN(num1) || isNaN(num2)) {
+    if(typeof num1 === "string" || typeof num2 === "string") {
         const data = {
             status: 'error',
             message: 'Invalid data types'
@@ -87,7 +87,7 @@ app.post('/multiply', (req, res) => {
     const num1 = req.body.num1;
     const num2 = req.body.num2;
     const mul = num1 * num2;
-    if(isNaN(num1) || isNaN(num2)) {
+    if(typeof num1 === "string" || typeof num2 === "string") {
         const data = {
             status: 'error',
             message: 'Invalid data types'
@@ -119,7 +119,7 @@ app.post('/divide', (req, res) => {
     const num1 = req.body.num1;
     const num2 = req.body.num2;
     const div = num1 / num2;
-    if(isNaN(num1) || isNaN(num2)) {
+    if(typeof num1 === "string" || typeof num2 === "string") {
         const data = {
             status: 'error',
             message: 'Invalid data types'
