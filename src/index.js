@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 // your code goes here
 
 app.get('/', (req, res) => {
-    res.send("Hello World!");
+    res.send("Hello world!.");
 });
 
 app.post('/add', (req, res) => {
