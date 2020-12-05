@@ -43,7 +43,7 @@ app.post('/add', (req, res) => {
     } else {
         const data = {
             status: 'success',
-            message: 'The sum of given two numbers',
+            message: 'the sum of given two numbers',
             sum: sum
         };
         res.send(data);
@@ -75,7 +75,7 @@ app.post('/sub', (req, res) => {
     } else {
         const data = {
             status: 'success',
-            message: 'The difference of given two numbers',
+            message: 'the difference of given two numbers',
             difference: diff
         };
         res.send(data);
